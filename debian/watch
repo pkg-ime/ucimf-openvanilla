@@ -1,0 +1,5 @@
+version=3
+
+http://code.google.com/p/ucimf/ \
+http://ucimf.googlecode.com/files/ucimf-openvanilla-(.*)\.tar\.gz
+

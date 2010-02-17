@@ -1,0 +1,16 @@
+Source: ucimf-openvanilla
+Section: utils
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Uploaders: Aron Xu <happyaron.xu@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libltdl-dev, libucimf-dev
+Standards-Version: 3.8.4
+Homepage: http://code.google.com/p/ucimf
+
+Package: ucimf-openvanilla
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ucimf, libopenvanilla
+Description: openvanilla input method collection for ucimf
+ This package contains a collection of openvanilla input method
+ for ucimf, which can provide a recommended working input method
+ for users.
