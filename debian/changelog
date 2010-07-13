@@ -1,3 +1,18 @@
+ucimf-openvanilla (2.10.11-1) unstable; urgency=low
+
+  * New upstream release:
+      Tuning Makefile and scripts,
+      Function improvements.
+  * debian/control:
+      Bump std-ver to 3.9.0,
+      Change dependency issues stuff to work with openvanilla-modules changes.
+  * debian/copyright:
+      Update copyright information.
+  * debian/watch:
+      Update to make it work with code.google.com changes.
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Tue, 13 Jul 2010 15:09:32 +0800
+
 ucimf-openvanilla (2.10.6-1) unstable; urgency=low
 
   * Initial release (Closes: #570202) 

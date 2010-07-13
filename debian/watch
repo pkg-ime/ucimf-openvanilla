@@ -1,5 +1,3 @@
 version=3
-
-http://code.google.com/p/ucimf/ \
-http://ucimf.googlecode.com/files/ucimf-openvanilla-(.*)\.tar\.gz
-
+opts=downloadurlmangle=s#.*(ucimf-openvanilla-([\d.]+)\.tar\.gz).*#http://ucimf.googlecode.com/files/$1#,filenamemangle=s#.*(ucimf-openvanilla-([\d.]+)\.tar\.gz).*#$1# \
+    http://code.google.com/p/ucimf/downloads/list ^.*detail\?name=ucimf-openvanilla-([\d.]+)\.tar\.gz.*

@@ -1,8 +1,7 @@
-pkglib_LTLIBRARIES = openvanilla.la
-pkglibdir=$(libdir)/ucimf/
+ACLOCAL_AMFLAGS = -I m4
 
-openvanilla_la_SOURCES = openvanilla.cpp openvanilla.h debug.h
-openvanilla_la_CPPFLAGS = -I/$(includedir) -I. 
-openvanilla_la_LDFLAGS = -module -avoid-version -no-undefined -Wl,-E -Bsymbolic -lltdl 
+SUBDIRS = src 
 
-EXTRA_DIST= OpenVanilla/OVLibrary.h OpenVanilla/OVUtility.h OpenVanilla/OpenVanilla.h
+noinst_HEADERS =  include/OpenVanilla/OVLibrary.h \
+                  include/OpenVanilla/OVUtility.h \
+                  include/OpenVanilla/OpenVanilla.h
