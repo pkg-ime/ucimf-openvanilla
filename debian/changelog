@@ -1,3 +1,12 @@
+ucimf-openvanilla (2.10.11-2) unstable; urgency=low
+
+  * Use my @debian.org email address
+  * Std-ver: 3.9.0 -> 3.9.2, no change.
+  * Remove useless .la file.
+  * LDFLAGS += -Wl,--as-needed
+
+ -- Aron Xu <aron@debian.org>  Mon, 01 Aug 2011 08:44:53 +0000
+
 ucimf-openvanilla (2.10.11-1) unstable; urgency=low
 
   * New upstream release:
