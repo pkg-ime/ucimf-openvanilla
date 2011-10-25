@@ -2,10 +2,11 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(ucimf-openvanilla,2.10.6, ucimf@googlegroups.com)
+AC_INIT(ucimf-openvanilla,2.10.11, ucimf@googlegroups.com)
 AM_INIT_AUTOMAKE
-AC_CONFIG_SRCDIR([openvanilla.cpp])
+AC_CONFIG_SRCDIR([src/openvanilla.cpp])
 AC_CONFIG_HEADER([config.h])
+AC_CONFIG_MACRO_DIR([m4])
 
 # Checks for programs.
 AC_PROG_CXX
@@ -30,10 +31,8 @@ AC_FUNC_CLOSEDIR_VOID
 AC_HEADER_STDC
 AC_CHECK_FUNCS([memset setlocale strstr])
 
-test "x$prefix" = xNONE && prefix=$ac_default_prefix
-test "x$exec_prefix" = xNONE && exec_prefix=${prefix}
-LIBDIR="`eval echo $libdir`"
-AC_DEFINE_UNQUOTED([LIBDIR], ["${LIBDIR}"], [Description])
+AC_DEFINE_DIR([LIBDIR], [libdir], [Description])
+AC_DEFINE_DIR([DATADIR], [datadir], [Description])
 
 AH_VERBATIM([USE_DEBUG],[#undef USE_DEBUG])
 AC_ARG_ENABLE([debug],
@@ -47,5 +46,7 @@ fi
 AM_CONDITIONAL(ENABLE_DEBUG, test "$debug" = "yes")
 
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile
+src/Makefile
+])
 AC_OUTPUT
